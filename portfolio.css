@@ -1,0 +1,809 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* Body Styling */
+body {
+    background-color: #16a085;
+    color: white;
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #333;
+    color: white;
+}
+
+/* Container for the toggle */
+ .toggle-switch {
+    position: fixed;
+    display: inline-block;
+    width: 50px;
+    height: 30px;
+    margin-top: 25px;
+    margin-left: 50px;
+}
+
+/* Hide default checkbox */
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The track */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    background-color: #ccc;
+    border-radius: 24px;
+    width: 100%;
+    height: 100%;
+    transition: background-color 0.3s;
+}
+
+/* The circular slider */
+.slider::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 2px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+/* Toggled state */
+.toggle-switch input:checked+.slider {
+    background-color: #16a085;
+}
+
+.toggle-switch input:checked+.slider::before {
+    transform: translateX(26px);
+} 
+
+
+
+/* Navigation Styling */
+nav {
+    /* background-color: #333; */
+    padding: 10px 0;
+    text-align: center;
+    
+}
+
+nav ol {
+    list-style: none;
+}
+
+nav li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #f1c40f;
+}
+
+/* Header Styling */
+header {
+    /* background-color: #333; */
+    color: #fff;
+    padding: 50px 20px;
+    width: 100%;
+}
+
+/* Flexbox Layout for Header */
+.header-content {
+    display: flex;
+    justify-content: space-between; /* Space between text and image */
+    align-items: center; /* Align items vertically in the center */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.text-content {
+    flex: 1; /* Take up available space */
+    max-width: 60%; /* Limit width to 60% */
+    text-align: left; /* Align text to the left */
+}
+
+.text-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.text-content p {
+    font-size: 1.1em;
+    margin: 20px 0;
+    line-height: 1.6;
+}
+
+.resume{
+    flex: 1; /* Take up available space */
+    max-width: 32%;
+    text-align: center; 
+    background-color: #f1c40f;
+    padding: 10px 20px;
+    margin: 50px 0;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.resume:hover{
+    background-color: #f39c12;
+}
+
+
+.text-content ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.text-content li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.text-content a {
+    color: #fff;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.text-content a:hover {
+    color: #f1c40f;
+}
+
+/* Profile Image Styling */
+.profile-img {
+    flex: 1; /* Allow the image to take up the remaining space */
+    text-align: center;
+    animation: imageAppear 2s ease-in-out; /* Animate image appearance */
+    height: 530px;
+}
+
+.profile-img img {
+    border-radius: 50%;
+    transition: transform 0.5s ease, box-shadow 0.3s ease; /* Smooth transition on hover */
+    will-change: transform, box-shadow;
+}
+
+/* Hover effect for image */
+.profile-img img:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+    box-shadow: 0 0 15px rgba(241, 196, 15, 0.7); /* Add glowing effect */
+}
+
+/* Keyframe Animation for Image */
+@keyframes imageAppear {
+    0% {
+        opacity: 0;
+        transform: scale(0.5); /* Start with a small size */
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1); /* End with normal size */
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        text-align: center;
+    }
+
+    .text-content {
+        max-width: 100%; /* Allow text content to take full width */
+    }
+
+    .profile-img {
+        margin-top: 20px;
+    }
+
+    .profile-img img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+
+/* About Section */
+#About {
+    /* background-color: #333; */
+    
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Title Styling */
+#About h2 {
+    font-size: 3.5em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+/* About Text Styling */
+#About p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 20px auto;
+    color: #fff;
+}
+
+/* Flexbox for Layout */
+.main-Content {
+    display: flex;
+    justify-content: space-between; /* Space between the text and image */
+    align-items: center; /* Vertically center both the text and the image */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Text Content Styling */
+.inner-content {
+    flex: 1; /* Allow the text to take up available space */
+    text-align: left; /* Align text to the left */
+    margin-right: 20px; /* Space between text and image */
+    height: 450px;
+}
+
+/* Initially hide extra content */
+.more-text {
+    display: none;
+}
+
+/* Read More Button Styling */
+.read-more {
+    text-decoration: none;
+    background-color: #f39c12;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.read-more:hover {
+    background-color: #e67e22;
+}
+
+
+
+/* Image Styling */
+.developer-image {
+    flex: 1; /* Allow the image to take up remaining space */
+    text-align: center;
+    animation-name: DeveloperImage;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.developer-image img {
+    width: 100%;
+    max-width: 400px; /* Limit the image size */
+    height: 350px;
+    border-radius: 10px;
+}
+
+/* Keyframes for Animation */
+@keyframes DeveloperImage{
+    25%{
+        transform: skew(15deg);
+    }
+
+    75%{
+        transform: skew(15deg);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-Content {
+        flex-direction: column; /* Stack the content vertically on small screens */
+        text-align: center;
+    }
+
+    .inner-content {
+        margin-right: 0; /* Remove the right margin on smaller screens */
+    }
+
+    .developer-image img {
+        max-width: 100%; /* Make the image responsive on small screens */
+    }
+}
+
+
+
+/* Education Section Styling */
+#Education {
+    padding: 40px;
+    /* background-color: #333; */
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(19, 18, 18, 0);
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+/* Education Entry Styles */
+.edu-entry {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.edu-entry:last-child {
+    border-bottom: none;
+}
+
+.edu-institute {
+    display: flex;
+    align-items: center;
+}
+
+.edu-icon {
+    /* font-size: 2.5rem; */
+    margin-right: 10px;
+}
+
+.edu-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+}
+
+/* Education Details (Degree and Date) */
+.edu-details {
+    text-align: right;
+}
+
+.degree {
+    font-size: 1.1rem;
+    color: beige;
+}
+
+.year {
+    font-size: 0.9rem;
+    color: beige;
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 768px) {
+    .edu-entry {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .edu-details {
+        text-align: left;
+    }
+}
+
+
+
+
+/* Skills Section */
+#Skills {
+   
+    /* background-color: #333; */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#Skills h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#Skills p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    text-align: left;
+    max-width: 800px;
+    margin: 20px auto;
+    color: #fff;
+}
+
+.skill-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.skill-item{
+    text-align: center;
+}
+
+/* Circular Progress Bar */
+.progress-bar{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: conic-gradient(#f1c40f calc(var(--progress) * 1%), #ddd 0);
+    display: inline-block;
+    position: relative;
+    margin-top: 10px;
+}
+
+/* Center the percentage inside the progress bar */
+.progress-bar:before {
+    content: attr(data-progress) '%';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5em;
+    color: #0b0b0b;
+}
+
+
+/* Internship Section */
+#Internship{
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.card {
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 0.8s ease-in-out forwards;
+}
+
+.card-header {
+    color: white;
+    padding: 15px;
+    border-radius: 10px 10px 0 0;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-body p {
+    font-size: 1rem;
+    color: #f1c40f;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.card:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+
+
+/* Certifications Section Stlying start */
+#certificate {
+    padding: 50px 20px;
+    text-align: center;
+    width: 100%;
+}
+
+#certificate h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.Certification {
+    display: inline-block;
+    /* background-color: #333;  */
+    padding: 20px;
+    margin: 15px;
+    width: calc(33% - 30px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+    animation-name: certificate;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes certificate {
+    25%{
+        transform: translateX(500px);
+    }
+}
+
+.Certification:hover {
+    transform: scale(1.05);
+}
+
+.Certification a {
+    text-decoration: none;
+    color: #f39c12;
+}
+
+.Certification a:hover {
+    color: #e67e22;
+}
+
+/* Projects Section */
+#Project {
+    /* background-color: #333; */
+    padding: 50px 20px;
+}
+
+#Project h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.project-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 400px;
+    margin: 10px;
+    /* background-color: #333; */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card h3 {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.project-link {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+    background-color: #f39c12;
+}
+
+.card:hover {
+    transform: scale(1.10);
+}
+
+
+/* Awards Section */
+#Awards {
+    padding: 2rem;
+    /* background-color: #333; */
+}
+
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.timeline-item {
+    padding: 10px 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.timeline-item:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 6px;
+    height: 100%;
+    background: #f1c40f;
+    transform: translateX(-50%);
+}
+
+.timeline-content {
+    background: #f1c40f;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 45%;
+    transition: all 0.3s ease-in-out;
+}
+
+.timeline-content:hover {
+    background-color: #333;
+    color: white;
+}
+
+.timeline-content h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Contact Section */
+#Contact {
+    /* background-color: #333; */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#Contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form button {
+    background-color: #f39c12;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #e67e22;
+}
+
+/* Footer Styling */
+footer {
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer li {
+    display: inline;
+    margin: 0 15px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #f1c40f;
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    .card {
+        width: 45%;
+    }
+
+    .Certification {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+    }
+
+    .Certification {
+        width: 100%;
+    }
+
+    form {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav {
+        padding: 10px 0;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+}

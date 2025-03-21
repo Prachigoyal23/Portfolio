@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prachi's Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <script src="portfolio.js" defer></script>
+</head>
+<body>
+    <!-- Dark/Light Mode Toggle -->
+
+    <label class="toggle-switch">
+        <input type="checkbox" class="toggle" id="toggle" />
+        <span class="slider"></span>
+    </label>
+
+    <nav>
+        <ol>
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Education">Education</a></li>
+            <li><a href="#Skills">Skills</a></li>
+            <li><a href="#Internship">Internships</a></li>
+            <li><a href="#Project">Projects</a></li>
+            <li><a href="#certificate">Certificates</a></li>
+            <li><a href="#Awards">Honors and Awards</a></li>
+            <li><a href="#Contact">Contact</a></li>
+        </ol>
+    </nav>
+    
+    <header id="Home">
+        <div class="header-content">
+            <div class="text-content">
+                <h1>Welcome to my Portfolio!</h1>
+                <p>Hi there! I am Prachi Goyal. Highly skilled and results-oriented professional with solid academic preparation holding a bachelor degree and master's degree in Mathematics.
+                    Proven ability to assess and manage complex obstacles; viewed as a strong troubleshooter. Successful in intense and demanding environments,
+                    providing decisive team leadership and structure with a track record of motivating and developing soldiers.
+                </p>
+    
+                <div class="resume">
+                    <a href="/Prachi_Goyal_Resume.pdf" target="_blank">View Resume</a>
+                </div>
+                
+                <br>
+                <br>
+                <br>
+                <br>
+    
+                <h3>Contact with Me</h3>
+                <ul>
+                    <li><a href="mailto:prachigoyal2324@gmail.com"><img height="50px" width="50px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRK87NmyYkOaLyQeW_0QsfdSnWSZYvPeqhBw&s" alt="Gmail"></a></li>
+                    <li><a href="https://www.linkedin.com/in/prachi-goyal-a71873259/" target="_blank"><img width="50" height="50" src="data:image/png;base64,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" alt="LinkedIn"></a></li>
+                    <li><a href="https://github.com/Prachigoyal23" target="_blank"><img height="50" width="70" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9k7fYauqqOvNRWLADNndcdMoYRdcSix660g&s" alt="Github"></a></li>
+                    <li><a href="https://www.instagram.com/prachigoyal1107?igsh=YTY4emY4dTUybzd1" target="_blank"><img height="50" width="50" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1024px-Instagram_logo_2022.svg.png" alt="Instagram"></a></li>
+                </ul>
+            </div>
+            <figure class="profile-img">
+                <img height="500px" width="500px" src="/Prachi_Goyal_Photo.jpeg" alt="Profile Image">
+            </figure>
+        </div>
+    </header>
+
+    <section id="About">
+        
+            <h2>About Me</h2>
+            <div class="main-Content">
+              <div class="inner-content">
+               
+                <p class="original">
+                    Hi, my name is Prachi Goyal. I have recently completed my master's in Mathematics and am currently pursuing a course
+                    as a Full Stack Developer at Internshala. During my college years, I learned Python, SQL, Power BI, Tableau, Machine
+                    Learning, and Excel. Additionally, I have expertise in HTML, CSS, JavaScript and more. 
+                    <span class="more-text">Recently, I completed a 5-month internship as a Data Analyst
+                    at Khimji Kunverji & Co.
+                    I have worked on projects such as Flipkart Mobile Data Analysis, HR Analytics, and House Rent Prediction.
+                    I secured 1st rank in the Hack-Ideathon competition organized by MIT WPU and received the Medhavi Scholarship by the
+                    MP Government.
+                    In my free time, I enjoy playing badminton and writing poetry, which helps keep my mind healthy and active.</span>
+                </p>
+
+            <a href="javascript:void(0);" class="read-more" id="read-more-btn">Read More</a>
+             </div>
+
+            <figure class="developer-image">
+                <img src="https://media.istockphoto.com/id/1451456915/photo/female-freelance-developer-coding-and-programming-coding-on-two-with-screens-with-code.jpg?s=612x612&w=0&k=20&c=BFFIc-xOwzeRyR8ui9VkFKEqqqQFBbISJzr-ADN6hS8=" alt="Developer Photo">
+            </figure>
+        </div>
+</section>
+
+<section id="Education">
+    <h2>Education</h2>
+    
+    <div class="edu-entry">
+        <div class="edu-institute">
+            <span class="edu-icon"><img height="40" width="40" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2lYL03AcrqMAgvXOVdxygydHCr0U3i5bglA&s" alt="internshala-icon">></span>
+            <span class="edu-name">Internshala Institute</span>
+        </div>
+        <div class="edu-details">
+            <p class="degree">Full Stack Developer Course</p>
+            <p class="year">[Jan 2025 - Current]</p>
+        </div>
+    </div>
+
+    <div class="edu-entry">
+        <div class="edu-institute">
+            <span class="edu-icon"><img height="50" width="50" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB2TTXfHWwjjm_PSGwaXVGO8euCvQWqGqnhg&s" alt="MITWPU-icon"></span>
+            <span class="edu-name">MIT World Peace University</span>
+        </div>
+        <div class="edu-details">
+            <p class="degree">Master's in Mathematics</p>
+            <p class="year">Graduated: 2024</p>
+        </div>
+    </div>
+
+    <div class="edu-entry">
+        <div class="edu-institute">
+            <span class="edu-icon"><img height="50" width="50" src="https://akm-img-a-in.tosshub.com/sites/resources/campus/prod/img/logo/2023/9/08122020jiwajimonocopy1533946756127.jpg" alt="Jiwaji University Icon"></span>
+            <span class="edu-name">Jiwaji University</span>
+        </div>
+        <div class="edu-details">
+            <p class="degree">Bachelor of Science (Mathematics)</p>
+            <p class="year">Graduated: 2021</p>
+        </div>
+    </div>
+
+    <div class="edu-entry">
+        <div class="edu-institute">
+             <span class="edu-icon"><img height="50" width="50" src="https://play-lh.googleusercontent.com/eOZqxkXfz2X5Fko8p-y9Zw3D3MVtMYe6qP5KJZG5c-Ewl4_qFAysMJW6ubxfJSPhrg" alt="MP Board icon"></span>
+            <span class="edu-name">Madhya Pradesh Board of Secondary Education</span>
+        </div>
+        <div class="edu-details">
+            <p class="degree">Higher Secondary Certificate</p>
+            <p class="year">Graduated: 2018</p>
+        </div>
+    </div>
+
+    <div class="edu-entry">
+        <div class="edu-institute">
+            <span class="edu-icon"><img height="40" width="50" src="https://c.ndtvimg.com/2023-12/m9caq18_cbse_625x300_12_December_23.jpg" alt="CBSE icon"></span>
+            <span class="edu-name">Central Board of Secondary Education</span>
+        </div>
+        <div class="edu-details">
+            <p class="degree">Secondary School Certificate</p>
+            <p class="year">Graduated: 2016</p>
+        </div>
+    </div>
+</section>
+
+
+    <section id="Skills">
+       <h2>My Skills</h2>
+       <div class="skill-container">
+
+        <div class="skill-item">
+            <p><strong>Programming Language:</strong> Python, SQL, C++, JavaScript</p>
+            <div class="progress-bar" data-progress="60" style="--progress: 60;"></div>
+        </div>
+    
+
+        <div class="skill-item">
+            <p><strong>Web Development Skills:</strong> HTML, CSS, WordPress</p>
+            <div class="progress-bar" data-progress="70" style="--progress: 70;"></div>
+        </div>
+       
+        <div class="skill-item">
+            <p><strong>Data Visualization Tools:</strong> Power BI, Tableau, Excel, Matplotlib, Seaborn</p>
+            <div class="progress-bar" data-progress="80" style="--progress: 80;"></div>
+        </div>
+
+        <div  class="skill-item">
+            <p><strong>DataBases:</strong> MongoDB, MYSQL</p>
+            <div class="progress-bar" data-progress="50" style="--progress: 50;"></div>
+        </div>
+        
+        <div class="skill-item">
+            <p><strong>Other Skills:</strong>  Machine Learning, Web Scraping, ETL</p>
+            <div class="progress-bar" data-progress="65" style="--progress: 65;"></div>
+        </div>
+        
+        <div class="skill-item">
+            <p><strong>Mathematics:</strong> Calculus, Algebra, Graph Theory, Statistics</p>
+            <div class="progress-bar" data-progress="68" style="--progress: 68;"></div>
+        </div>
+
+        <div class="skill-item">
+            <p><strong>Soft Skiils:</strong> Problem-Solving, Communication, Teamwork, Time Management, Analytics Thinking</p>
+            <div class="progress-bar" data-progress="90" style="--progress: 90;"></div>
+        </div>
+       </div>
+        
+    </section>
+
+    <h2>Internships</h2>
+    <section id="Internship">
+        <!-- <h2>Internships</h2> -->
+    <section class="Data Analyst Intern">
+        <div class="card">
+            <div class="card-header">
+                <h3>Data Analyst Intern</h3>
+            </div>
+            <div class="card-body">
+                <p><strong>Khimji Kunverji & Co</strong> [Jan 2024 - May 2024]</p>
+            <ul>
+                <li>Developed customized interactive Dashboards for effective presentation of complex financial information, providing clients with intuitive tools for data -driven decision support.</li>
+                <li>Familiar with CRM workflow and functionalities.</li>
+                <li>Conducted in-depth analysis of a significant volume of financial data, exceeding 30 lakhs, to derive actionable insights for strategic decision making.</li>
+                <li>Utilized IDEA Caseware to automate repetitive tasks by recording macros, streamlining workflow efficiency.</li>
+                <li>Leveraged advanced queries to simplify complex tasks, enhancing data analysis and reporting capabilities.</li>
+                <li>Engaged in client-facing activities, including on-site visits to address specific project needs and provide support.</li>
+
+            </ul>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="Data Annotation Intern">
+        <div class="card">
+            <div class="card-header">
+                <h3>Data Annotator</h3>
+            </div>
+            <div class="card-body">
+                <p><strong>Xane.AI</strong> [June 2023 - August 2023]</p>
+                <ul>
+                    <li>Efficiently labeled and categorized diverse datasets according to project requirements, ensuring high-quality annotations for machine learning model training.</li>
+                    <li>Conducted thorough quality assurance checks to verify the accuracy and consistency of annotations, maintaining data integrity and reliability</li>
+                    <li>Utilized Makesense proficiently to streamline annotation tasks and improve efficiency.</li>
+                </ul>
+            </div>
+           
+        </div>
+    </section>
+
+</section>
+
+<section id="Project">
+    <h2>Projects</h2>
+    <div class="project-box">
+        <!-- Project Cards -->
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXtEOOy6fnSjOPae1Weohc1tzbi8eqt7rdwgfOiyFhMa67zW1uwbesl3iVcMbAta7pQOA&usqp=CAU" alt="Weather Forecast Image">
+            <div class="card-content">
+                <h3>Weather Forecast Application</h3>
+                <p>The Weather Forecast Application is a web-based tool built with HTML, CSS, and JavaScript that allows users to check real-time weather conditions for any location. Users can search for weather by typing in a location, view their current location’s weather using a geolocation feature, and see a 5-day weather forecast. The app displays essential weather information such as temperature, wind speed, humidity, and weather conditions. It also offers dynamic background changes and icons to match the current weather. The application features a responsive design, ensuring smooth use on both mobile and desktop devices. This project demonstrates my proficiency in integrating APIs, handling geolocation, and creating an intuitive user interface with a focus on functionality and responsiveness.</p>
+            </div>
+            <a href="https://github.com/Prachigoyal23/Weather-Forecast-Application" target="_blank" class="project-link">View Project</a>
+        </div>
+
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRtEUR4oYa_u7Gf5iWQVlT9auXQbCcMalpaw&s" alt="Student Registration Image">
+            <div class="card-content">
+                <h3>Student Registration System</h3>
+                <p>The Student Registration System is a web application built using HTML, CSS, and JavaScript that allows users to manage student information such as Name, Student ID, Email, and Contact Number. The system enables users to register students, view a scrollable list of registered students in a table format, and easily edit or delete student records. It features a custom scrollbar for better navigation, and its responsive design ensures optimal viewing on both mobile and desktop devices. The project demonstrates my skills in front-end development, with functionality powered by JavaScript and data stored locally for efficient management.</p>
+            </div>
+            <a href="https://github.com/Prachigoyal23/Student-Registration-System" target="_blank" class="project-link">View Project</a>
+        </div>
+
+        <div class="card">
+            <img src="/Photo of Flipkart Mobile Data Project.jpg" alt="Analysis of Flipkart Mobile Data Image">
+            <div class="card-content">
+                <h3>Analysis of Flipkart Mobile Data</h3>
+                <p>This project involves the development of a web scraping script to extract detailed product information about mobile phones from Flipkart, specifically for products priced under INR 50,000. The extracted data is then analyzed to understand pricing trends, customer reviews, and product specifications. The project demonstrates proficiency in Python scripting, web scraping, data handling, and SQL database operations.</p>
+            </div>
+            <a href="https://github.com/Prachigoyal23/Analysis-of-Flipkart-Mobile-Data" target="_blank" class="project-link">View Project</a>
+        </div>
+
+        <div class="card">
+            <img src="/Photo of House Rent Prediction Project.jpg" alt="House Rent Prediction Image">
+            <div class="card-content">
+                <h3>House Rent Prediction</h3>
+                <p>This project focuses on predicting house rent prices using machine learning algorithms. The goal is to build a model that can estimate rental prices based on various features of the houses. The project employs Python and several machine learning libraries to preprocess data, train models, and evaluate their performance.</p>
+                
+            </div>
+            <a href="https://github.com/Prachigoyal23/House-Rent-Prediction" target="_blank" class="project-link">View Project</a>
+        </div>
+
+        <div class="card">
+            <img src="/Photo of Borrowers Insights Project.avif" alt="Borrowers-Insights Project Image">
+            <div class="card-content">
+                <h3>Borrowers Insights</h3>
+                <p>In this project, I performed a comprehensive analysis of borrower data to uncover key trends and patterns. Using SQL, I efficiently queried large datasets to extract valuable insights, identify lending patterns, and assess borrower behaviors. This project showcases my ability to work with structured data, write complex queries, and deliver data-driven solutions for financial analysis. It highlights my skills in data manipulation, reporting, and providing actionable insights for decision-making.</p>
+                
+            </div>
+            <a href="https://github.com/Prachigoyal23/Borrowers-Insights" target="_blank" class="project-link">View Project</a>
+        </div>
+
+        <div class="card">
+            <img src="/Photo of HR Analytics Dashboard Project.jpg" alt="HR Analytics Project Image">
+            <div class="card-content">
+                <h3>HR Analytics</h3>
+                <p>The HR Analytics Dashboard provides a comprehensive overview of key HR metrics and visualizations. This dashboard is designed to help HR professionals and managers understand employee statistics, attrition trends, and other essential insights.</p>
+               
+            </div>
+            <a href="https://github.com/Prachigoyal23/HR-Analytics" target="_blank" class="project-link">View Project</a>
+        </div>
+
+        
+        <div class="card">
+            <img src="/Photo of Call Centre Data Analysis Project.webp" alt="Call Centre Data Analysis Image">
+            <div class="card-content">
+                <h3>Call Centre Data Analysis Using Python</h3>
+                <p>This Project presents an analysis of call center data, aimed at 
+                    evaluating key metrics and providing actionable insights to optimize 
+                    call handling, improve user satisfaction, and enhance call center 
+                    performance. The data includes various parameters such as call 
+                    charges, TalkTime, user spending, refund status, and more. Through 
+                    detailed data exploration, visualizations, and performance analysis, 
+                    this report highlights areas for potential improvements.</p>
+                    
+            </div>
+            <a href="CALL CENTRE DATA ANALYSIS _Prachi.pdf" target="_blank" class="project-link">View Project</a>
+        </div>
+
+        <div class="card">
+            
+            <img src="/Photo of Vrinda Store Analysis Project.jpg" alt="Vrinda Store Analysis Photo">
+            <div class="card-content">
+                <h3>Annual Report of Vrinda Store</h3>
+                <p>The main of this Project is to generate the insights on the sales performance of Vrinda Store
+                    in 2022. By analyzing sales data, the aim is to understand custtomer behaviour and trends in order
+                    to optimize sales strategies for 2023.
+                </p>
+            </div>
+            <a href="Annual Report of Vrinda Store.xlsx" target="_blank" class="project-link">View Project</a>
+        </div>
+
+        
+    </div>
+</section>
+
+
+<section id="certificate">
+    <h2>Certificates</h2>
+
+    <section class="Certification">
+        <div>
+            <h3>Power BI Virtual Case Experience</h3>
+            <p><strong>Issued By :</strong> Forage</p>
+            <a href="/PWC Virtual Certificate.pdf" target="_blank">View Certificate</a>
+        </div>
+    </section>
+
+    <section class="Certification">
+        <div>
+            <h3>Accenture Data Analytics and Visualization</h3>
+            <p><strong>Issued By :</strong> Forage</p>
+            <a href="/Accenture Data Analytics and Bisualization Virtual Internship Certificate.pdf" target="_blank">View Certificate</a>
+        </div>
+    </section>
+
+<section class="Certification">
+    <div>
+        <h3>SQL For Data Science</h3>
+        <p><strong>Issued By :</strong> Coursera</p>
+        <a href="/SQL For Data Science.pdf" target="_blank">View Certificate</a>
+    </div>
+</section>
+
+<section class="Certification">
+    <div>
+        <h3>Data Driven Decision By Power BI</h3>
+        <p><strong>Issued By :</strong> Coursera</p>
+        <a href="/Data Driven Decision By Power BI.pdf" target="_blank">View Certificate</a>
+    </div>
+</section>
+
+<section class="Certification">
+    <div>
+        <h3>Charts and Dashboards Using Microsoft Excel</h3>
+        <p><strong>Issued By :</strong> Coursera</p>
+        <a href="/Charts and Dashboard Using MS Excel.pdf" target="_blank">View Certificate</a>
+    </div>
+</section>
+</section>
+
+
+<section id="Awards">
+    <h2>Honors and Awards</h2>
+    <div class="timeline">
+        <div class="timeline-item">
+            <div class="timeline-content">
+                <h3>Hack-Ideathon Competition</h3>
+                <p>1st rank in Hack-Ideathon Competition Organized by MIT- WPU</p>
+                <span class="date">2023</span>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-content">
+                <h3>Medhavi Scholarship</h3>
+                <p>Got Medhavi Schlorship by MP Government.</p>
+                <span class="date">2018</span>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- <section id="Blogs">
+
+</section> -->
+
+<section id="Contact">
+    <h2>Let's Connect!
+
+    </h2>
+    <form action=" ">
+        <label for="name"><strong>Full Name:</strong></label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        <!-- <br>
+        <br> -->
+
+        <label for="email"><strong>Email:</strong></label>
+        <input type="email" id="email" name="email" placeholder="Enter your Email" required>
+
+
+        <label for="message"><strong>Message:</strong></label>
+        <!-- <br> -->
+        <textarea id="message" name="message" rows="4" placeholder = "Enter your Message" required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+
+</section>
+
+    <footer>
+        <ul>
+            <li><a Email: href = "mailto:prachigoyal2324@gmail.com">EMail</a></li>
+            <li><a Phone: href="tel:+918359978903">Phone Number</a></li>
+            <li><a LinkedIn: href="https://www.linkedin.com/in/prachi-goyal-a71873259/" target="_blank">LinkedIN</a></li>
+            <li><a GitHub: href = "https://github.com/Prachigoyal23" target="_blank">GitHub</a></li>
+        </ul>
+    
+    </footer>
+    
+
+
+
+</body>
+</html>
